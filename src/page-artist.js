@@ -17,7 +17,7 @@ class PageSearchResult extends Component {
     return (
       <React.Fragment>
         <SearchBar
-          onChange={this.changeHandle}
+          onChange={this.handleChange}
           busqueda={this.state.busqueda}
         />
         <div className="container">
