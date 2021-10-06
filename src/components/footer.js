@@ -1,11 +1,8 @@
 import React from "react";
 
-function Footer(props) {
-  const children = props.children;
+function Footer() {
   return (
     <React.Fragment>
-      {children}
-
       <div className="row">
         <div className="col-md-12 centrar">
           <p>Todos los derechos reservados 2021 @NicolasLlanos</p>

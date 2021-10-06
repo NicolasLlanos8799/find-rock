@@ -4,9 +4,19 @@ import SearchBar from "./components/search-bar.js";
 import SearchResult from "./components/search-result.js";
 
 class PageSearchResult extends Component {
-  state = {
-    busqueda: "",
-  };
+  state = {};
+
+  componentDidMount() {
+    console.log("componentDidMount()", "Luego del metodo render ");
+  }
+  componentWillMount() {
+    console.log("componentWillMount()", "Antes del metodo render");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount", "cuando me fui");
+  }
+
   changeHandle = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -14,6 +24,7 @@ class PageSearchResult extends Component {
   };
 
   render() {
+    console.log("render()", "Estoy en el metodo render");
     return (
       <React.Fragment>
         <SearchBar
