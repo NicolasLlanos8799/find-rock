@@ -31,6 +31,7 @@ class SearchResult extends Component {
       this.setState({
         loading: false,
         error: true,
+        errorMensaje: data.message,
       });
     } else {
       this.setState({
@@ -44,7 +45,7 @@ class SearchResult extends Component {
     return (
       <React.Fragment>
         {this.state.loading && <Loading></Loading>}
-        {this.state.error && <h1>Error de algo</h1>}
+        {this.state.error && <h1>{this.state.errorMensaje}</h1>}
         <div className="container">
           <div className="row">
             {this.state.data.similarartists.artist.map((item, i) => {
